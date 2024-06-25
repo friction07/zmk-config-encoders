@@ -11,6 +11,10 @@ config I2C
 config SSD1306
     default y
 
+endif # ZMK_DISPLAY
+
+if LVGL
+
 config LV_Z_VDB_SIZE
     default 64
 
@@ -24,6 +28,6 @@ choice LV_COLOR_DEPTH
     default LV_COLOR_DEPTH_1
 endchoice
 
-endif # ZMK_DISPLAY
+endif # LVGL
 
 endif
