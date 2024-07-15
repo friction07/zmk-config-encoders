@@ -1,6 +1,15 @@
 #include "corny.dtsi"
 
-&kscan1 {
+/ {
+    chosen {
+        zmk,kscan = &kscan1;
+    };
+
+    kscan1: kscan_matrix {
+        compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
+        diode-direction = "col2row";
+
     col-gpios
         = <&xiao_d 6 GPIO_ACTIVE_HIGH>
         , <&xiao_d 10 GPIO_ACTIVE_HIGH>
@@ -16,4 +25,6 @@
       , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
       , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
       ;
+
+    };
 };
