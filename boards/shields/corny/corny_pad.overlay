@@ -1,10 +1,10 @@
 #include "corny.dtsi"
 
-/ {
+&default_transform {
+    col-offset = <12>;
+};
 
-    &default_transform {
-        col-offset = <12>;
-    };
+/ {
 
     chosen {
         zmk,kscan = &kscan2;
