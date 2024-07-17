@@ -5,12 +5,11 @@
 };
 
 / {
-
     chosen {
-        zmk,kscan = &kscan2;
+        zmk,kscan = &kscan0;
     };
 
-    kscan2: kscan_direct {
+    kscan0: kscan_direct {
         compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
 
@@ -48,5 +47,4 @@
         sensors = <&top_encoder &bottom_encoder>;
         triggers-per-rotation = <20>;
     }; 
-
 };
