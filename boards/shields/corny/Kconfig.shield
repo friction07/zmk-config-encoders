@@ -1,8 +1,0 @@
-config SHIELD_CORNY_LEFT
-    def_bool $(shields_list_contains,corny_left)
-
-config SHIELD_CORNY_RIGHT
-    def_bool $(shields_list_contains,corny_right)
-
-config SHIELD_CORNY_PAD
-    def_bool $(shields_list_contains,corny_pad)
